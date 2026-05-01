@@ -265,7 +265,7 @@ namespace Steamworks
 
 		public static bool InitFilterText() => Internal.InitFilterText();
 
-		public string FilterText( string pchInputMessage, bool bLegalOnly )
+		public static string FilterText( string pchInputMessage, bool bLegalOnly )
 		{
 			 Internal.FilterText( out var pchOutFilteredText, pchInputMessage, bLegalOnly );
 			 return pchOutFilteredText;

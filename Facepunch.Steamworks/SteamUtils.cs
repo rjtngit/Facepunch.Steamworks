@@ -261,5 +261,14 @@ namespace Steamworks
 		/// Returns whether this steam client is a Steam China specific client, vs the global client
 		/// </summary>
 		public static bool IsSteamChinaLauncher => Internal.IsSteamChinaLauncher();
+
+
+		public static bool InitFilterText() => Internal.InitFilterText();
+
+		public string FilterText( string pchInputMessage, bool bLegalOnly )
+		{
+			 Internal.FilterText( out var pchOutFilteredText, pchInputMessage, bLegalOnly );
+			 return pchOutFilteredText;
+		}
 	}
 }

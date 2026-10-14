@@ -25,6 +25,11 @@ namespace Steamworks.Data
 		internal uint[] reserved; // reserved uint32 [16]
 
 		/// <summary>
+		/// Connection State
+		/// </summary>
+		public ConnectionState State => state;
+		
+		/// <summary>
 		/// Current ping (ms)
 		/// </summary>
 		public int Ping => ping;

@@ -1,1 +1,13 @@
-name: Disabled
+name: Build All
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Disabled on master
+        run: |
+          echo "::error::disabled on master"
+          exit 1
